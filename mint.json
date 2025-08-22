@@ -1,0 +1,131 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Rush2.ai Documentation",
+  "projectId": "68a8862aba931b1a9c7443c4",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#7C3AED",
+    "background": {
+      "dark": "#0A0A0A",
+      "light": "#FAFAFA"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@rush2.ai"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://app.rush2.ai"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "Developer Guide",
+      "url": "developer"
+    },
+    {
+      "name": "Architecture",
+      "url": "architecture"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://docs.rush2.ai"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://rush2.ai/community"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://rush2.ai/blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "core/multi-tenancy",
+        "core/brand-management",
+        "core/content-generation",
+        "core/security"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/authentication"
+      ]
+    },
+    {
+      "group": "Endpoints",
+      "pages": [
+        "api-reference/endpoint/auth",
+        "api-reference/endpoint/brands",
+        "api-reference/endpoint/content",
+        "api-reference/endpoint/images",
+        "api-reference/endpoint/videos"
+      ]
+    },
+    {
+      "group": "Developer Guide",
+      "pages": [
+        "developer/setup",
+        "developer/environment",
+        "developer/database",
+        "developer/testing",
+        "developer/deployment"
+      ]
+    },
+    {
+      "group": "Architecture",
+      "pages": [
+        "architecture/overview",
+        "architecture/tech-stack",
+        "architecture/data-model",
+        "architecture/api-design",
+        "architecture/security-model"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/rush2ai",
+    "github": "https://github.com/sirmaxworld/rush2ai_v3",
+    "linkedin": "https://www.linkedin.com/company/rush2ai"
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": ""
+    }
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  }
+}
