@@ -1,0 +1,139 @@
+---
+title: 'Welcome to Rush2.ai'
+description: 'Multi-tenant AI-powered content creation platform'
+---
+
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="Hero Dark"
+/>
+
+## What is Rush2.ai?
+
+Rush2.ai is a comprehensive multi-tenant SaaS platform that enables businesses to create, manage, and scale AI-powered content generation with brand consistency and enterprise-grade security.
+
+## Key Features
+
+<CardGroup cols={2}>
+  <Card
+    title="Multi-Tenant Architecture"
+    icon="building"
+    href="/core/multi-tenancy"
+  >
+    Isolated workspaces with custom domains, SSO, and complete data separation
+  </Card>
+  <Card
+    title="Brand Management"
+    icon="palette"
+    href="/core/brand-management"
+  >
+    AI-powered brand profile synthesis and enforcement across all content
+  </Card>
+  <Card
+    title="Content Generation"
+    icon="wand-magic-sparkles"
+    href="/core/content-generation"
+  >
+    Text, image, and video generation with brand guardrails
+  </Card>
+  <Card
+    title="Enterprise Security"
+    icon="shield-halved"
+    href="/core/security"
+  >
+    SOC2 compliant with GDPR support and comprehensive audit logging
+  </Card>
+</CardGroup>
+
+## Quick Links
+
+<CardGroup cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get up and running in 5 minutes
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference/introduction">
+    Explore our RESTful API
+  </Card>
+  <Card title="Architecture" icon="sitemap" href="/architecture/overview">
+    Understand the system design
+  </Card>
+</CardGroup>
+
+## Technology Stack
+
+### Frontend
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with custom design system
+- **State Management**: Zustand + React Query
+- **UI Components**: Radix UI primitives
+
+### Backend
+- **Database**: PostgreSQL with Prisma ORM
+- **Vector Storage**: pgvector for embeddings
+- **CMS**: Directus for content management
+- **Workflow**: Temporal for orchestration
+- **Cache**: Redis for rate limiting
+
+### AI/ML
+- **LLM Providers**: OpenAI, Anthropic, Perplexity
+- **Image Generation**: Recraft, Stability AI
+- **Video Processing**: Shotstack
+- **Embeddings**: OpenAI Ada-002
+
+### Infrastructure
+- **Hosting**: Vercel Edge Functions
+- **Storage**: Cloudflare R2
+- **CDN**: Cloudflare
+- **Monitoring**: Sentry, PostHog
+
+## Getting Started
+
+<Steps>
+  <Step title="Clone the Repository">
+    ```bash
+    git clone https://github.com/sirmaxworld/rush2ai_v3.git
+    cd rush2ai_v3
+    ```
+  </Step>
+  <Step title="Install Dependencies">
+    ```bash
+    npm install
+    ```
+  </Step>
+  <Step title="Configure Environment">
+    ```bash
+    cp .env.example .env.local
+    # Edit .env.local with your API keys
+    ```
+  </Step>
+  <Step title="Run Development Server">
+    ```bash
+    npm run dev
+    ```
+  </Step>
+</Steps>
+
+## Support
+
+<CardGroup cols={2}>
+  <Card
+    title="Discord Community"
+    icon="discord"
+    href="https://discord.gg/rush2ai"
+  >
+    Join our community for help and discussions
+  </Card>
+  <Card
+    title="GitHub Issues"
+    icon="github"
+    href="https://github.com/sirmaxworld/rush2ai_v3/issues"
+  >
+    Report bugs and request features
+  </Card>
+</CardGroup>

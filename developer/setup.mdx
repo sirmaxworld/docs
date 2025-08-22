@@ -1,0 +1,229 @@
+---
+title: 'Development Setup'
+description: 'Complete guide for setting up your development environment'
+---
+
+## System Requirements
+
+- **Node.js**: 18.x or higher
+- **npm**: 9.x or higher
+- **PostgreSQL**: 14.x or higher
+- **Redis**: 7.x or higher (optional, for caching)
+- **Git**: 2.x or higher
+
+## IDE Setup
+
+### VS Code Extensions
+
+```json
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "bradlc.vscode-tailwindcss",
+    "mintlify.document"
+  ]
+}
+```
+
+### Settings
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
+```
+
+## Project Structure
+
+```
+rush2ai_v3/
+├── .taskmaster/          # Task management
+├── docs/                 # Documentation
+├── pages/                # Next.js pages
+│   ├── api/             # API routes
+│   └── auth/            # Auth pages
+├── src/
+│   ├── components/      # React components
+│   ├── lib/             # Utilities
+│   │   ├── ai/          # AI integrations
+│   │   ├── auth/        # Auth logic
+│   │   └── db/          # Database utilities
+│   ├── hooks/           # Custom hooks
+│   └── types/           # TypeScript types
+├── prisma/              # Database schema
+├── scripts/             # Utility scripts
+└── tests/               # Test files
+```
+
+## Database Setup
+
+### Local PostgreSQL
+
+```bash
+# Install PostgreSQL
+brew install postgresql@14
+brew services start postgresql@14
+
+# Create database
+createdb rush2ai_dev
+
+# Run migrations
+npx prisma migrate dev
+```
+
+### Using Docker
+
+```yaml
+# docker-compose.yml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: rush2ai_dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
+```
+
+## Environment Variables
+
+### Required Variables
+
+```env
+# Database
+DATABASE_URL=postgresql://user:pass@localhost:5432/rush2ai_dev
+
+# Auth
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=generate-with-openssl-rand-base64-32
+
+# AI Providers (at least one)
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+```
+
+### Optional Variables
+
+```env
+# Redis
+REDIS_URL=redis://localhost:6379
+
+# Monitoring
+SENTRY_DSN=
+POSTHOG_API_KEY=
+
+# Storage
+CLOUDFLARE_R2_ACCESS_KEY=
+CLOUDFLARE_R2_SECRET_KEY=
+```
+
+## Running the Project
+
+### Development Mode
+
+```bash
+# Install dependencies
+npm install
+
+# Generate Prisma client
+npx prisma generate
+
+# Run migrations
+npx prisma migrate dev
+
+# Start dev server
+npm run dev
+```
+
+### Testing
+
+```bash
+# Run all tests
+npm test
+
+# Run with coverage
+npm run test:coverage
+
+# Run specific test file
+npm test -- pages/api/auth
+```
+
+### Building for Production
+
+```bash
+# Build the application
+npm run build
+
+# Start production server
+npm start
+```
+
+## Debugging
+
+### Server-side Debugging
+
+```json
+// .vscode/launch.json
+{
+  "configurations": [
+    {
+      "name": "Next.js: debug server-side",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    }
+  ]
+}
+```
+
+### Client-side Debugging
+
+Use Chrome DevTools or React Developer Tools extension.
+
+## Common Issues
+
+### Port Already in Use
+
+```bash
+# Find process using port 3000
+lsof -i :3000
+
+# Kill the process
+kill -9 <PID>
+```
+
+### Database Connection Issues
+
+```bash
+# Test connection
+npx prisma db pull
+
+# Reset database
+npx prisma migrate reset
+```
+
+### Module Resolution Issues
+
+```bash
+# Clear cache and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```

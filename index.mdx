@@ -1,97 +1,139 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: 'Welcome to Rush2.ai'
+description: 'Multi-tenant AI-powered content creation platform'
 ---
 
-## Setting up
+## What is Rush2.ai?
 
-Get your documentation site up and running in minutes.
+Rush2.ai is a comprehensive multi-tenant SaaS platform that enables businesses to create, manage, and scale AI-powered content generation with brand consistency and enterprise-grade security.
+
+## Key Features
+
+<Columns cols={2}>
+  <Card
+    title="Multi-Tenant Architecture"
+    icon="building"
+    href="/core/multi-tenancy"
+  >
+    Isolated workspaces with custom domains, SSO, and complete data separation
+  </Card>
+  <Card
+    title="Brand Management"
+    icon="palette"
+    href="/core/brand-management"
+  >
+    AI-powered brand profile synthesis and enforcement across all content
+  </Card>
+  <Card
+    title="Content Generation"
+    icon="wand-magic-sparkles"
+    href="/core/content-generation"
+  >
+    Text, image, and video generation with brand guardrails
+  </Card>
+  <Card
+    title="Enterprise Security"
+    icon="shield-halved"
+    href="/core/security"
+  >
+    SOC2 compliant with GDPR support and comprehensive audit logging
+  </Card>
+</Columns>
+
+## Quick Start
 
 <Card
-  title="Start here"
+  title="Get started in 5 minutes"
   icon="rocket"
   href="/quickstart"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Clone, configure, and deploy your first Rush2.ai instance
 </Card>
 
-## Make it yours
+## Developer Resources
 
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<Columns cols={3}>
+  <Card title="API Reference" icon="code" href="/api-reference/introduction">
+    Explore our RESTful API
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Architecture" icon="sitemap" href="/architecture/overview">
+    Understand the system design
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Development" icon="terminal" href="/development">
+    Set up your local environment
   </Card>
 </Columns>
 
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
+## Technology Stack
 
 <Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+  <Card title="Frontend" icon="window">
+    - Next.js 14 with App Router
+    - Tailwind CSS
+    - Zustand + React Query
+    - Radix UI primitives
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Backend" icon="server">
+    - PostgreSQL with Prisma
+    - pgvector for embeddings
+    - Directus CMS
+    - Temporal workflows
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
+  <Card title="AI/ML" icon="robot">
+    - OpenAI & Anthropic
+    - Recraft & Stability AI
+    - Shotstack video
+    - OpenAI embeddings
   </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
+  <Card title="Infrastructure" icon="cloud">
+    - Vercel Edge Functions
+    - Cloudflare R2
+    - Redis caching
+    - Sentry monitoring
   </Card>
 </Columns>
 
-## Need inspiration?
+## Getting Started
+
+<Columns cols={2}>
+  <Card
+    title="Clone Repository"
+    icon="github"
+    href="https://github.com/sirmaxworld/rush2ai_v3"
+  >
+    Get the source code from GitHub
+  </Card>
+  <Card
+    title="Read the Docs"
+    icon="book-open-cover"
+    href="/quickstart"
+  >
+    Follow our setup guide
+  </Card>
+  <Card
+    title="Join Community"
+    icon="discord"
+    href="https://discord.gg/rush2ai"
+  >
+    Get help and share ideas
+  </Card>
+  <Card
+    title="Deploy to Production"
+    icon="rocket"
+    href="/developer/deployment"
+  >
+    Launch your platform
+  </Card>
+</Columns>
+
+## Need Help?
 
 <Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="Support & Resources"
+  icon="life-ring"
+  href="/support"
+  horizontal
 >
-  Browse our showcase of exceptional documentation sites.
+  Get assistance through our Discord community, GitHub issues, or email support
 </Card>

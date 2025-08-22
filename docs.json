@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Rush2.ai Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#7C3AED"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -16,25 +16,38 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
+              "introduction",
               "quickstart",
               "development"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Concepts",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "core/multi-tenancy",
+              "core/brand-management",
+              "core/content-generation",
+              "core/security"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Developer Guide",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "developer/setup",
+              "developer/environment",
+              "developer/database",
+              "developer/testing",
+              "developer/deployment"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/tech-stack",
+              "architecture/data-model",
+              "architecture/api-design",
+              "architecture/security-model"
             ]
           },
           {
@@ -57,12 +70,33 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Authentication",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/auth-:...nextauth"
+            ]
+          },
+          {
+            "group": "Content Generation",
+            "pages": [
+              "api-reference/endpoint/image-to-prompt",
+              "api-reference/endpoint/recraft-generate",
+              "api-reference/endpoint/recraft-generate-v2",
+              "api-reference/endpoint/recraft-generate-v3",
+              "api-reference/endpoint/recraft-generate-v4"
+            ]
+          },
+          {
+            "group": "Image Processing",
+            "pages": [
+              "api-reference/endpoint/recraft-image-to-image",
+              "api-reference/endpoint/recraft-inpaint",
+              "api-reference/endpoint/recraft-create-style"
+            ]
+          },
+          {
+            "group": "Account Management",
+            "pages": [
+              "api-reference/endpoint/recraft-balance"
             ]
           }
         ]
@@ -96,13 +130,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@rush2.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.rush2.ai"
     }
   },
   "contextual": {
@@ -119,9 +153,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/rush2ai",
+      "github": "https://github.com/sirmaxworld/rush2ai_v3",
+      "linkedin": "https://linkedin.com/company/rush2ai"
     }
   }
 }
